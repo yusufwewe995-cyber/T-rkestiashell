@@ -74,7 +74,7 @@ StyledClippingRect {
 
         StyledText {
             Layout.fillWidth: true
-            text: qsTr("Battery")
+            text: qsTr("Batarya")
             color: contents.textColour
             font: Tokens.font.body.medium
         }

@@ -74,7 +74,7 @@ StyledRect {
 
                 StyledText {
                     Layout.alignment: Qt.AlignHCenter
-                    text: qsTr("Used")
+                    text: qsTr("Kullanılıyor")
                     font: Tokens.font.body.small
                     color: Colours.palette.m3onSurfaceVariant
                 }

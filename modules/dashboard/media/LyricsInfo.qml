@@ -178,7 +178,7 @@ Item {
                 StyledText {
                     id: placeholderText
 
-                    text: Lyrics.loading ? qsTr("Loading...") : qsTr("No lyrics found")
+                    text: Lyrics.loading ? qsTr("Yükleniyor...") : qsTr("Şarkı sözleri bulunamadı")
                     color: Colours.palette.m3onSurfaceVariant
                     font: Tokens.font.body.medium
                     animate: true

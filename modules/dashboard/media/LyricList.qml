@@ -188,7 +188,7 @@ Item {
             }
 
             StyledText {
-                text: qsTr("Loading lyrics...")
+                text: qsTr("Şarkı sözleri yükleniyor...")
                 color: Colours.palette.m3onSurfaceVariant
                 font: Tokens.font.title.medium
             }
@@ -220,7 +220,7 @@ Item {
             }
 
             StyledText {
-                text: qsTr("No lyrics found")
+                text: qsTr("Şarkı sözü bulunamadı!")
                 color: Colours.palette.m3outline
                 font: Tokens.font.title.medium
             }

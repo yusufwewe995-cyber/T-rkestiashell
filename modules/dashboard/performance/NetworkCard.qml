@@ -37,7 +37,7 @@ StyledRect {
             }
 
             StyledText {
-                text: qsTr("Network")
+                text: qsTr("İnternet")
                 font: Tokens.font.title.medium
             }
         }
@@ -112,7 +112,7 @@ StyledRect {
             }
 
             StyledText {
-                text: qsTr("Download")
+                text: qsTr("İndirme")
                 font: Tokens.font.body.small
                 color: Colours.palette.m3onSurfaceVariant
             }
@@ -143,7 +143,7 @@ StyledRect {
             }
 
             StyledText {
-                text: qsTr("Upload")
+                text: qsTr("Gönderme")
                 font: Tokens.font.body.small
                 color: Colours.palette.m3onSurfaceVariant
             }
@@ -174,7 +174,7 @@ StyledRect {
             }
 
             StyledText {
-                text: qsTr("Total")
+                text: qsTr("Toplam")
                 font: Tokens.font.body.small
                 color: Colours.palette.m3onSurfaceVariant
             }

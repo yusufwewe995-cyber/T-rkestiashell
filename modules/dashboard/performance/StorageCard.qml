@@ -71,7 +71,7 @@ StyledRect {
 
                     StyledText {
                         Layout.alignment: Qt.AlignHCenter
-                        text: qsTr("Used")
+                        text: qsTr("Kullanılan")
                         font: Tokens.font.body.small
                         color: Colours.palette.m3onSurfaceVariant
                     }
@@ -90,7 +90,7 @@ StyledRect {
                 StyledText {
                     text: {
                         if (!Storage.primaryDisk)
-                            return qsTr("No disks detected");
+                            return qsTr("Disk seçilmedi");
 
                         const fmt = UsageFmt.formatKib(Storage.primaryDisk.used, Storage.primaryDisk.total);
                         return `${+fmt.value.toFixed(1)} / ${+fmt.total.toFixed(1)} ${fmt.unit}`;

@@ -28,7 +28,7 @@ Item {
 
             StyledText {
                 Layout.fillWidth: true
-                text: qsTr("Lyrics")
+                text: qsTr("Şarkı sözleri")
                 font: Tokens.font.title.medium
             }
 
