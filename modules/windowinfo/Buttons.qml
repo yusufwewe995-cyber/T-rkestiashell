@@ -24,7 +24,7 @@ ColumnLayout {
 
         StyledText {
             Layout.fillWidth: true
-            text: qsTr("Move to workspace")
+            text: qsTr("Çalışma alanını hareket ettir")
             elide: Text.ElideRight
         }
 

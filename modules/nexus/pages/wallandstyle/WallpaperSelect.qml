@@ -32,7 +32,7 @@ PageBase {
 
             IconTextButton {
                 icon: "photo_library"
-                text: qsTr("Browse")
+                text: qsTr("Göz at")
                 font: Tokens.font.body.large
                 isRound: true
                 shapeMorph: true
@@ -55,7 +55,7 @@ PageBase {
 
             IconTextButton {
                 icon: "shuffle"
-                text: qsTr("Random")
+                text: qsTr("Rasgele")
                 font: Tokens.font.body.large
                 isRound: true
                 shapeMorph: true
@@ -83,7 +83,7 @@ PageBase {
 
         StyledText {
             Layout.topMargin: Tokens.spacing.large
-            text: qsTr("Local wallpapers")
+            text: qsTr("Yerel duvar kağıtları")
             font: Tokens.font.title.small
         }
 
@@ -177,7 +177,7 @@ PageBase {
 
                     StyledText {
                         Layout.alignment: Qt.AlignHCenter
-                        text: qsTr("No local wallpapers found")
+                        text: qsTr("Duvar kağıdı bulunamadı")
                         color: Colours.palette.m3outline
                         font: Tokens.font.title.small
                     }

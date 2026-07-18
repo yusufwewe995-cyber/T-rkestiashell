@@ -65,7 +65,7 @@ Item {
             anchors.right: parent.right
             anchors.leftMargin: Tokens.spacing.extraSmall
 
-            text: root.notifCount > 0 ? qsTr("notification%1").arg(root.notifCount === 1 ? "" : "s") : qsTr("Notifications")
+            text: root.notifCount > 0 ? qsTr("notification%1").arg(root.notifCount === 1 ? "" : "s") : qsTr("Bildirimler")
             color: Colours.palette.m3outline
             font: Tokens.font.label.large
             elide: Text.ElideRight
@@ -108,7 +108,7 @@ Item {
 
                 StyledText {
                     Layout.alignment: Qt.AlignHCenter
-                    text: qsTr("All up to date!")
+                    text: qsTr("Her şey güncel!")
                     color: Colours.palette.m3outlineVariant
                     font: Tokens.font.headline.builders.small.width(90).build()
                 }

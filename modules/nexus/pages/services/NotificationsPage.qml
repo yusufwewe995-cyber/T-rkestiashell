@@ -10,11 +10,11 @@ PageBase {
     // Notification fullscreen visibility, mapped to GlobalConfig.notifs.fullscreen
     readonly property list<MenuItem> notifFullscreenItems: [
         MenuItem {
-            text: qsTr("Off")
+            text: qsTr("Kapalı")
             icon: "notifications_off"
         },
         MenuItem {
-            text: qsTr("On")
+            text: qsTr("Açık")
             icon: "notifications"
         }
     ]
@@ -23,21 +23,21 @@ PageBase {
     // Toast fullscreen visibility, mapped to GlobalConfig.utilities.toasts.fullscreen
     readonly property list<MenuItem> toastFullscreenItems: [
         MenuItem {
-            text: qsTr("Off")
+            text: qsTr("Kapalı")
             icon: "notifications_off"
         },
         MenuItem {
-            text: qsTr("Important")
+            text: qsTr("Önemli")
             icon: "priority_high"
         },
         MenuItem {
-            text: qsTr("On")
-            icon: "notifications"
+            text: qsTr("Açık")
+            icon: "Bildirimler"
         }
     ]
     readonly property list<string> toastFullscreenValues: ["off", "important", "all"]
 
-    title: qsTr("Notifications")
+    title: qsTr("Bildirimler")
     isSubPage: true
 
     ColumnLayout {
@@ -54,30 +54,30 @@ PageBase {
 
         SelectRow {
             first: true
-            label: qsTr("Show in fullscreen")
-            subtext: qsTr("Whether notifications appear over fullscreen apps")
+            label: qsTr("Tam ekranda göster")
+            subtext: qsTr("Tam ekran uygulamalarda bildirimleri göster")
             menuItems: root.notifFullscreenItems
             active: root.notifFullscreenItems[Math.max(0, root.notifFullscreenValues.indexOf(GlobalConfig.notifs.fullscreen))]
             onSelected: item => GlobalConfig.notifs.fullscreen = root.notifFullscreenValues[root.notifFullscreenItems.indexOf(item)]
         }
 
         ToggleRow {
-            text: qsTr("Expire automatically")
+            text: qsTr("Otomatik süre aşımı")
             subtext: qsTr("Dismiss notifications after their timeout")
             checked: GlobalConfig.notifs.expire
             onToggled: GlobalConfig.notifs.expire = checked
         }
 
         ToggleRow {
-            text: qsTr("Open expanded")
-            subtext: qsTr("Show notifications expanded by default")
+            text: qsTr("Genişletilmiş olarak aç")
+            subtext: qsTr("Bildirimleri varsayılan olarak genişletilmiş göster")
             checked: GlobalConfig.notifs.openExpanded
             onToggled: GlobalConfig.notifs.openExpanded = checked
         }
 
         StepperRow {
-            label: qsTr("Default timeout")
-            subtext: qsTr("Time before a notification dismisses (ms)")
+            label: qsTr("varsayılan zaman aşımı")
+            subtext: qsTr("Bildirim kaybolma süresi (ms)")
             value: GlobalConfig.notifs.defaultExpireTimeout
             from: 1000
             to: 60000
@@ -87,8 +87,8 @@ PageBase {
 
         StepperRow {
             last: true
-            label: qsTr("Group preview count")
-            subtext: qsTr("Notifications shown per group before collapsing")
+            label: qsTr("Önizleme sayısı")
+            subtext: qsTr("Daraltılmadan önce grup başına gösterilecek bildirim sayısı")
             value: GlobalConfig.notifs.groupPreviewNum
             from: 1
             to: 10
@@ -98,13 +98,13 @@ PageBase {
 
         // Toasts
         SectionHeader {
-            text: qsTr("Toasts")
+            text: qsTr("Anlık bildirim")
         }
 
         SelectRow {
             first: true
-            label: qsTr("Show in fullscreen")
-            subtext: qsTr("Whether toasts appear over fullscreen apps")
+            label: qsTr("Tam ekranda göster")
+            subtext: qsTr("Tam ekran uygulamalarda anlık bildirimleri göster")
             menuItems: root.toastFullscreenItems
             active: root.toastFullscreenItems[Math.max(0, root.toastFullscreenValues.indexOf(GlobalConfig.utilities.toasts.fullscreen))]
             onSelected: item => GlobalConfig.utilities.toasts.fullscreen = root.toastFullscreenValues[root.toastFullscreenItems.indexOf(item)]
@@ -112,8 +112,8 @@ PageBase {
 
         StepperRow {
             last: true
-            label: qsTr("Visible toasts")
-            subtext: qsTr("Maximum number of toasts shown at once")
+            label: qsTr("Anlık bildirimleri gizle")
+            subtext: qsTr("Aynı anda gösterilecek maksimum anlık bildirim sayısı")
             value: GlobalConfig.utilities.maxToasts
             from: 1
             to: 10
@@ -123,67 +123,67 @@ PageBase {
 
         // Toast events
         SectionHeader {
-            text: qsTr("Toast events")
+            text: qsTr("Anlık bildirim onayları")
         }
 
         ToggleRow {
             first: true
-            text: qsTr("Charging changes")
+            text: qsTr("Şarj durumu değişiklikleri")
             checked: GlobalConfig.utilities.toasts.chargingChanged
             onToggled: GlobalConfig.utilities.toasts.chargingChanged = checked
         }
 
         ToggleRow {
-            text: qsTr("Game mode changes")
+            text: qsTr("Oyun modu değişiklikleri")
             checked: GlobalConfig.utilities.toasts.gameModeChanged
             onToggled: GlobalConfig.utilities.toasts.gameModeChanged = checked
         }
 
         ToggleRow {
-            text: qsTr("Do not disturb changes")
+            text: qsTr("Rahatsız etmeyin değişiklikleri")
             checked: GlobalConfig.utilities.toasts.dndChanged
             onToggled: GlobalConfig.utilities.toasts.dndChanged = checked
         }
 
         ToggleRow {
-            text: qsTr("Audio output changes")
+            text: qsTr("Ses çıkışı değişiklikleri")
             checked: GlobalConfig.utilities.toasts.audioOutputChanged
             onToggled: GlobalConfig.utilities.toasts.audioOutputChanged = checked
         }
 
         ToggleRow {
-            text: qsTr("Audio input changes")
+            text: qsTr("Ses girişi değişiklikleri")
             checked: GlobalConfig.utilities.toasts.audioInputChanged
             onToggled: GlobalConfig.utilities.toasts.audioInputChanged = checked
         }
 
         ToggleRow {
-            text: qsTr("Caps lock changes")
+            text: qsTr("Büyük harf kilidi değişiklikleri")
             checked: GlobalConfig.utilities.toasts.capsLockChanged
             onToggled: GlobalConfig.utilities.toasts.capsLockChanged = checked
         }
 
         ToggleRow {
-            text: qsTr("Num lock changes")
+            text: qsTr("Sayı kilidi değişiklikleri")
             checked: GlobalConfig.utilities.toasts.numLockChanged
             onToggled: GlobalConfig.utilities.toasts.numLockChanged = checked
         }
 
         ToggleRow {
-            text: qsTr("Keyboard layout changes")
+            text: qsTr("Kılavye düzeni değişiklikleri")
             checked: GlobalConfig.utilities.toasts.kbLayoutChanged
             onToggled: GlobalConfig.utilities.toasts.kbLayoutChanged = checked
         }
 
         ToggleRow {
-            text: qsTr("VPN changes")
+            text: qsTr("VPN değişiklikleri")
             checked: GlobalConfig.utilities.toasts.vpnChanged
             onToggled: GlobalConfig.utilities.toasts.vpnChanged = checked
         }
 
         ToggleRow {
             last: true
-            text: qsTr("Now playing")
+            text: qsTr("Şu anda oynuyor")
             checked: GlobalConfig.utilities.toasts.nowPlaying
             onToggled: GlobalConfig.utilities.toasts.nowPlaying = checked
         }

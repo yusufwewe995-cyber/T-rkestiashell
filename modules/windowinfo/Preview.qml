@@ -49,14 +49,14 @@ Item {
 
                 StyledText {
                     Layout.alignment: Qt.AlignHCenter
-                    text: qsTr("No active client")
+                    text: qsTr("Aktif oynatıcı yok")
                     color: Colours.palette.m3outline
                     font: Tokens.font.body.builders.large.size(28).weight(Font.Medium).build()
                 }
 
                 StyledText {
                     Layout.alignment: Qt.AlignHCenter
-                    text: qsTr("Try switching to a window")
+                    text: qsTr("Bir pencere açmayı veya seçmeyi dene")
                     color: Colours.palette.m3outline
                     font: Tokens.font.body.large
                 }
@@ -87,7 +87,7 @@ Item {
         text: {
             const client = root.client;
             if (!client)
-                return qsTr("No active client");
+                return qsTr("Aktif oynatıcı yok");
 
             const mon = client.monitor;
             return qsTr("%1 on monitor %2 at %3, %4").arg(client.title).arg(mon.name).arg(client.lastIpcObject.at[0]).arg(client.lastIpcObject.at[1]);

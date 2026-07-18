@@ -167,13 +167,13 @@ Loader {
                 spacing: Tokens.spacing.medium
 
                 StyledText {
-                    text: qsTr("Delete recording?")
+                    text: qsTr("Kayıdı silmek istediğinden eminmisin?")
                     font: Tokens.font.body.large
                 }
 
                 StyledText {
                     Layout.fillWidth: true
-                    text: qsTr("Recording '%1' will be permanently deleted.").arg(deleteConfirmation.path)
+                    text: qsTr("'%1 kaydı kalıcı olarak silinecek.").arg(deleteConfirmation.path)
                     color: Colours.palette.m3onSurfaceVariant
                     font: Tokens.font.body.small
                     wrapMode: Text.WrapAtWordBoundaryOrAnywhere
@@ -185,13 +185,13 @@ Loader {
                     spacing: Tokens.spacing.medium
 
                     TextButton {
-                        text: qsTr("Cancel")
+                        text: qsTr("İptal et")
                         type: TextButton.Text
                         onClicked: root.props.recordingConfirmDelete = ""
                     }
 
                     TextButton {
-                        text: qsTr("Delete")
+                        text: qsTr("Sil")
                         type: TextButton.Text
                         onClicked: {
                             CUtils.deleteFile(Qt.resolvedUrl(root.props.recordingConfirmDelete));

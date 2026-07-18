@@ -7,7 +7,7 @@ import qs.modules.nexus.common
 PageBase {
     id: root
 
-    title: qsTr("Taskbar")
+    title: qsTr("Görev çubuğu")
     isSubPage: true
 
     ColumnLayout {
@@ -19,28 +19,28 @@ PageBase {
         // Behaviour
         SectionHeader {
             first: true
-            text: qsTr("Behaviour")
+            text: qsTr("Davranış")
         }
 
         ToggleRow {
             first: true
-            text: qsTr("Persistent")
-            subtext: qsTr("Keep the bar visible at all times")
+            text: qsTr("Kalıcı")
+            subtext: qsTr("Çubuğu her zaman görünür tut")
             checked: Config.bar.persistent
             onToggled: GlobalConfig.bar.persistent = checked
         }
 
         ToggleRow {
-            text: qsTr("Show on hover")
-            subtext: qsTr("Reveal the bar when the cursor reaches the screen edge")
+            text: qsTr("Üzerine geldiğinde göster")
+            subtext: qsTr("İmleç ekran kenarına geldiğinde çubuğu göster")
             checked: Config.bar.showOnHover
             onToggled: GlobalConfig.bar.showOnHover = checked
         }
 
         StepperRow {
             last: true
-            label: qsTr("Drag threshold")
-            subtext: qsTr("Pixels dragged before the bar reveals")
+            label: qsTr("Sürükleme eşiği)
+            subtext: qsTr("Çubuğun (bar) görünmesi/ortaya çıkması için sürüklenmesi gereken piksel sayısı")
             value: Config.bar.dragThreshold
             from: 0
             to: 200
@@ -50,20 +50,20 @@ PageBase {
 
         // Components
         SectionHeader {
-            text: qsTr("Components")
+            text: qsTr("Bileşenler")
         }
 
         NavRow {
             first: true
             icon: "workspaces"
-            label: qsTr("Workspaces")
-            status: qsTr("Indicators, window icons")
+            label: qsTr("Çalışma alanları")
+            status: qsTr("Göstergeler,pencere simgeleri")
             onClicked: root.nState.openSubPage(5)
         }
 
         NavRow {
             icon: "web_asset"
-            label: qsTr("Active window")
+            label: qsTr("Pencereyi aktive et")
             status: qsTr("Title display, popout")
             onClicked: root.nState.openSubPage(6)
         }
@@ -97,14 +97,14 @@ PageBase {
 
         ToggleRow {
             first: true
-            text: qsTr("Workspaces")
+            text: qsTr("Çalışma alanları")
             subtext: qsTr("Scroll over the workspace indicator to switch workspaces")
             checked: Config.bar.scrollActions.workspaces
             onToggled: GlobalConfig.bar.scrollActions.workspaces = checked
         }
 
         ToggleRow {
-            text: qsTr("Volume")
+            text: qsTr("Ses")
             subtext: qsTr("Scroll on the top half of the bar to adjust volume")
             checked: Config.bar.scrollActions.volume
             onToggled: GlobalConfig.bar.scrollActions.volume = checked
