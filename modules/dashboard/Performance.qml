@@ -33,14 +33,14 @@ Item {
             StyledText {
                 Layout.topMargin: -Tokens.spacing.small
                 Layout.alignment: Qt.AlignHCenter
-                text: qsTr("No widgets enabled")
+                text: qsTr("Aktif araç yok!")
                 font: Tokens.font.title.large
                 color: Colours.palette.m3onSurface
             }
 
             StyledText {
                 Layout.alignment: Qt.AlignHCenter
-                text: qsTr("Enable widgets in the dashboard settings")
+                text: qsTr("Araç eklemek için kontrol paneli ayarlarına göz atın")
                 font: Tokens.font.body.small
                 color: Colours.palette.m3onSurfaceVariant
             }
