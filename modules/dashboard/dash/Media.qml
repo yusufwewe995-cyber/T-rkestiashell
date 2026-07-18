@@ -79,7 +79,7 @@ Item {
 
         animate: true
         horizontalAlignment: Text.AlignHCenter
-        text: (Players.active?.trackTitle ?? qsTr("Bir şeyler çal!")) || qsTr("Bilinmeyen başlık")
+        text: (Players.active?.trackTitle ?? qsTr("Bir şeyler çal")) || qsTr("Bilinmeyen başlık")
         color: Colours.palette.m3primary
         font: Tokens.font.title.small
 
@@ -96,7 +96,7 @@ Item {
 
         animate: true
         horizontalAlignment: Text.AlignHCenter
-        text: (Players.active?.trackAlbum ?? qsTr("Bir şeyler çal!")) || qsTr("Bilinmeyen albüm")
+        text: (Players.active?.trackAlbum ?? qsTr("Bir şeyler çal")) || qsTr("Bilinmeyen albüm")
         color: Colours.palette.m3outline
         font: Tokens.font.body.small
 
